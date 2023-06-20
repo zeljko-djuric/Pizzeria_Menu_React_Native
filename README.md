@@ -22,7 +22,7 @@ install dev dependencies
 
 Run The app
 
-### `npm start` or `yarn start`
+### `npm start`
 
 Runs your app in development mode.
 
