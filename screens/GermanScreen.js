@@ -2,13 +2,13 @@ import { View, Image, Dimensions, Platform } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
-import { info, menuItemsEnglish } from "../constants";
+import { info_german, menuItemsGerman } from "../constants";
 import Carousel from "react-native-snap-carousel";
 import MenuCard from "../components/menuCard";
 
 const { width, height } = Dimensions.get("window");
 const ios = Platform.OS == "ios";
-export default function HomeScreen() {
+export default function GermanScreen() {
   return (
     <View className="flex-1 relative bg-white">
       <StatusBar />
@@ -28,8 +28,10 @@ export default function HomeScreen() {
         <View>
           <Carousel
             containerCustomStyle={{ overflow: "visible" }}
-            data={menuItemsEnglish}
-            renderItem={({ item }) => <MenuCard item={item} info={info} />}
+            data={menuItemsGerman}
+            renderItem={({ item }) => (
+              <MenuCard item={item} info={info_german} />
+            )}
             firstItem={1}
             loop={true}
             inactiveSlideScale={0.75}
